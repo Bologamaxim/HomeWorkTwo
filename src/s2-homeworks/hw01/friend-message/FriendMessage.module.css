@@ -11,21 +11,26 @@
 }
 
 .friendText {
+    color: #00cc22;
 
 }
 
 .friendText:after {
+    color: #3b3e3c;
 
 }
 
 .friendName {
+    color: #704e29;
 
 }
 
 .friendMessageText {
+    color: #9844ae;
 
 }
 
 .friendTime {
+    color: #9844ae;
 
 }
