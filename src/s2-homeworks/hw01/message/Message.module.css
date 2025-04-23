@@ -1,17 +1,31 @@
 .message {
-
+    max-width: 50%;
+    width: max-content;
+    margin: 0 0 0 auto;
 }
 
 .imageAndText {
-
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
 }
 
 .imageAndText img {
-
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
 }
 
 .text {
+    width: 100%;
+    background-color: #0066CC;
+    box-shadow: 0 1px 2px 0 #1D21261A, 0 5px 20px 0 #1D212608;
+    padding: 8px 8px;
 
+    border-inline: 15px solid #0066CC;
+    border-radius: 25px 25px 0 25px / 10px 10px 0 10px;
+    mask: radial-gradient(100% 100% at 100% 0, #0000 99%, #000 102%) 100% 100% / 15px 15px no-repeat, linear-gradient(rgb(0, 0, 0) 0 0) padding-box;
 }
 
 .text:after {
@@ -19,13 +33,51 @@
 }
 
 .name {
-
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    margin-bottom: 5px;
 }
 
 .messageText {
-
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
 }
 
 .time {
+    display: flex;
+    justify-content: flex-end;
 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    color: #000000;
+    margin: 5px 11px 0 0;
+}
+
+
+
+
+
+
+
+
+.bubble {
+    --r: 1em; /* the radius */
+    --t: 1.5em; /* the size of the tail */
+
+    max-width: 300px;
+    padding: 1em;
+    border-inline: var(--t) solid #0000;
+    border-radius: calc(var(--r) + var(--t)) / var(--r);
+    mask: radial-gradient(100% 100% at var(--_p) 0, #0000 99%, #000 102%) var(--_p) 100% / var(--t) var(--t) no-repeat, linear-gradient(#000 0 0) padding-box;
+    background: linear-gradient(135deg, #fe6d00, #1384c5) border-box;
+    color: #fff;
 }
