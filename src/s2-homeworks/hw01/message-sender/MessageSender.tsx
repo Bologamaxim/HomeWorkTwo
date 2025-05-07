@@ -5,7 +5,7 @@ import s from './MessageSender.module.css'
 // компонента, которая тестирует вашу компоненту (не изменять, any не трогать)
 const MessageSender = (props: any) => {
     const M = props.M
-    const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+    const textareaRef = useRef<HTMLTextAreaElement >(null);
     const [messages, setMessages] = useState<any[]>([])
     const [text, setText] = useState<any>('')
 
@@ -15,23 +15,25 @@ const MessageSender = (props: any) => {
 
     useEffect(() => {
         if (textareaRef?.current) {
-            textareaRef.current.style.height = '0px'
+            textareaRef.current.style.height = '300px'
             textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px'
         }
     }, [text])
 
     const addMessage = () => {
-        setMessages([
-            ...messages,
-            {
-                id: messages.length ? messages.length + 1 : 1,
-                user: message0.user,
-                message: {
-                    text,
-                    time: new Date().toTimeString().slice(0, 5),
+        if (text){
+            setMessages([
+                ...messages,
+                {
+                    id: messages.length ? messages.length + 1 : 1,
+                    user: message0.user,
+                    message: {
+                        text,
+                        time: new Date().toTimeString().slice(0, 5),
+                    },
                 },
-            },
-        ])
+            ])
+        }
         setTimeout(() => setText(''), 4)
     }
 

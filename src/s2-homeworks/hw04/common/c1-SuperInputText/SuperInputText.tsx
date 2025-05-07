@@ -59,8 +59,8 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
             <input
                 id={id}
                 type={'text'}
-                onChange={onChangeCallback}
-                onKeyPress={onKeyPressCallback}
+                onChange={(e)=>{onChangeCallback(e)}}
+                onKeyPress={(e)=>{onKeyPressCallback(e)}}
                 className={finalInputClassName}
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
