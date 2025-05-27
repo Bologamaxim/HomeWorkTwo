@@ -5,6 +5,7 @@
 }
 
 .background {
+    background: #df0c0c;
 }
 
 .nav {
@@ -17,6 +18,7 @@
 }
 
 .nav a.active {
+    color: #5af41e;
 }
 .close {
 }
