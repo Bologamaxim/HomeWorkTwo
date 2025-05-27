@@ -40,5 +40,7 @@
 
 .spanClassName {
     font-family: 'Montserrat', sans-serif;
-    color: #06c;
+    color: #0066CC;
+    font-weight: 400;
+    font-size: 16px;
 }
