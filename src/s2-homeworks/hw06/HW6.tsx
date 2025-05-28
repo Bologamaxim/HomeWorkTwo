@@ -17,10 +17,13 @@ const HW6 = () => {
     const save = () => {
         saveState<string>('hw6-editable-span-value', value)
     }
+
     const restore = () => {
+        restoreState<string>('hw6-editable-span-value', value)
         // делают студенты
 
     }
+    const [autoFocus, setAutoFocus] = useState<boolean>(false)
 
     return (
         <div id={'hw6'}>
@@ -37,6 +40,8 @@ const HW6 = () => {
                             id: 'hw6-editable-span',
                             defaultText: 'enter text...',
                         }}
+                        autoFocus ={autoFocus}
+
                     />
                 </div>
 
